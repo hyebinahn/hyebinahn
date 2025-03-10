@@ -1,0 +1,105 @@
+body { 
+    background-image: url('https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExM3lld3hyemt1MDVwbG1ocGw1OHNtYmlrYWIxcnIwY3FiM2xidDR4ayZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/5FqXowP3ZtYTgPDJ7M/giphy.gif'), 
+                      url('https://i.pinimg.com/1200x/a8/cc/fb/a8ccfb749c0f7a2babaadc0fe18e0618.jpg'); 
+    /* 첫 번째 이미지: 비눗방울 GIF, 두 번째 이미지: 원래 배경 */
+    background-size: cover, cover; /* 두 개의 배경을 화면에 맞게 조정 */
+    background-position: center, center; /* 중앙 정렬 */
+    background-repeat: no-repeat, no-repeat; /* 반복 없음 */
+    height: 100vh; /* 전체 높이를 화면 크기로 설정 */
+    margin: 0;
+    text-align: center; /* 모든 텍스트 가운데 정렬 */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* 가로 중앙 정렬 */
+    justify-content: center; /* 세로 중앙 정렬 */
+    overflow: hidden; /* 불필요한 스크롤 방지 */
+}
+
+/* 불필요한 애니메이션 및 비눗방울 스타일 제거 */
+.bubble-container,
+.bubble,
+@keyframes float {
+    display: none;
+}
+
+/* header-style.css */
+header {
+    color: white;
+    font-size: 35px;
+    font-weight: bold;
+    text-align: center; /* 가운데 정렬 */
+}
+
+h2 {
+    color: rgb(173, 216, 230);
+    font-size: 25px;
+    font-weight: bold;
+    text-align: center; /* 가운데 정렬 */
+}
+
+p {
+    text-align: center; /* 모든 p 태그 중앙 정렬 */
+}
+
+/* 원형 이미지 스타일 */
+.circle-img {
+    width: 200px; /* 원하는 크기 설정 */
+    height: 200px; /* 정사각형 유지 */
+    border-radius: 50%; /* 원형 모양 */
+    object-fit: cover; /* 이미지 비율 유지하면서 크롭 */
+    display: block;
+    margin: 20px auto; /* 가운데 정렬 */
+    border: 5px solid white; /* 선택적 - 흰색 테두리 */
+}
+
+.friends {
+    color: rgb(135, 206, 250);
+    font-size: 15px;
+    text-align: center; /* 텍스트 중앙 정렬 */
+}
+
+.email-link {
+    color: white;
+    font-weight: bold;
+    text-decoration: none; /* 밑줄 제거 */
+    display: block; /* 블록 요소로 변경하여 중앙 정렬 */
+    text-align: center; /* 가운데 정렬 */
+}
+
+/* 이메일 버튼 스타일 */
+.email-button {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    color: white;
+    background-color: #007BFF;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.email-button:hover {
+    background-color: #0056b3;
+}
+
+
+
+/* 푸터 스타일 (배경 제거) */
+footer {
+    text-align: center;
+    padding: 15px;
+    font-size: 14px;
+    color: rgb(50, 50, 50); /* 글씨를 살짝 어둡게 */
+}
+
+footer a {
+    color: rgb(50, 50, 50);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}

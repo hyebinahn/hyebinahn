@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Self Introduction</title>
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Dancing+Script:wght@400;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css">
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        /* 전체 페이지 크기 조정 */
+        body {
+            transform: scale(0.9);
+            transform-origin: top;
+        }
+
+        /* 전체 문장 간 줄간격 조정 */
+        body {
+            line-height: 1.0;
+        }
+
+        /* 헤더 (이름) */
+        header {
+            font-family: 'Playfair Display', serif;
+            font-size: 32px;
+            margin-top: 140px;
+            margin-bottom: 20px;
+        }
+
+        /* 한 줄 소개 (필기체) */
+        h2 {
+            font-family: 'Dancing Script', cursive;
+            font-size: 28px;
+            font-weight: 700;
+            margin-bottom: 20px;
+        }
+
+        /* 이메일 버튼 스타일 */
+        .email-button {
+            font-family: 'Playfair Display', serif;
+            display: inline-block;
+            padding: 10px 20px;
+            font-size: 16px;
+            font-weight: bold;
+            color: white;
+            background-color: #007BFF;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            margin-top: 10px;
+        }
+
+        .email-button:hover {
+            background-color: #0056b3;
+        }
+
+        /* 직업 및 링크 스타일 */
+        .friends {
+            font-size: 16px;
+            font-weight: bold;
+            color: rgb(135, 206, 250);
+            margin-bottom: 15px;
+        }
+
+        .friends a {
+            text-decoration: none;
+            font-weight: bold;
+            color: rgb(135, 206, 250);
+        }
+
+        /* 푸터 스타일 */
+        footer {
+            text-align: center;
+            padding: 20px;
+            font-size: 14px;
+            color: white;
+            margin-top: 50px;
+        }
+
+        footer a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        /* 이미지 카드 스타일 */
+        .card-container {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 30px;
+        }
+
+        .card {
+            width: 120px;
+            height: 120px;
+            background: white;
+            border-radius: 50%;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            overflow: hidden;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .card:hover {
+            transform: scale(1.1);
+        }
+
+        .card img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 50%;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header> Hyebin Ahn (o´ω`o)ﾉ </header>
+    
+    <h2> Creating intuitive, user-centric designs </h2>
+
+    <p class="friends"> UI UX Designer | Blogger | 
+        <a href="https://www.instagram.com/hongkong.friend" target="_blank">
+            HK instagram
+        </a>
+    </p>
+
+    <br>
+
+    <div>
+        <button class="email-button" onclick="location.href='mailto:hyebin@duck.com'">
+            ✉ Contact via Email
+        </button>
+        <br><br>
+        <img src="https://i.pinimg.com/originals/44/ed/74/44ed74982853d508668e5007f3d8de3a.gif" class="circle-img">
+        <br><br>
+        
+        <!-- 재생/일시정지 버튼 박스 -->
+<div class="music-controls">
+    <button onclick="playMusic()">▶</button>
+    <button onclick="pauseMusic()">⏸</button>
+</div>
+
+<!-- YouTube 자동 재생 음악 (3초부터 시작 & 숨김 처리) -->
+<div class="music-player">
+    <iframe id="youtube-audio" width="0" height="0"
+        src="https://www.youtube.com/embed/T5C9-6_AyRk?autoplay=1&loop=1&playlist=T5C9-6_AyRk&start=3"
+        frameborder="0" allow="autoplay">
+    </iframe>
+</div>
+
+
+    <div class="card-container">
+        <div class="card">
+            <img src="photo.webp" alt="photoshop logo">
+        </div>
+        <div class="card">
+            <img src="figma logo.webp" alt="figma image">
+        </div>
+        <div class="card">
+            <img src="vs.png" alt="visual image">
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Hyebin Ahn. All rights reserved.</p>
+        <p>📧 Email: <a href="mailto:hyebin@duck.com">hyebin@duck.com</a></p>
+        <p>🔗 Follow me on 
+            <a href="https://www.instagram.com/hongkong.friend" target="_blank">Instagram</a> |
+            <a href="https://www.naver.com" target="_blank">Blog</a>
+        </p>
+    </footer>
+
+    <script>
+        function playMusic() {
+            let iframe = document.getElementById("youtube-audio");
+            iframe.src = "https://www.youtube.com/embed/T5C9-6_AyRk?autoplay=1&loop=1&playlist=T5C9-6_AyRk&start=3";
+        }
+
+        function pauseMusic() {
+            let iframe = document.getElementById("youtube-audio");
+            iframe.src = "";
+        }
+    </script>
+</body>
+</html>
